@@ -12,7 +12,6 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
   const onSubmit = (data) => {
-    console.log("🚀 ~ onSubmit ~ data:", data)
     onLogin(data);
 
   };

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const BlockInserter = ({ addBlock }) => {
   const contentTypes = [
     { label: "Text", emoji: "✍" },
-    { label: "Image", emoji: "" },
+    { label: "Image", emoji: "📷" },
     { label: "Video", emoji: "▶" },
     { label: "Text", emoji: "✍" },
   ];

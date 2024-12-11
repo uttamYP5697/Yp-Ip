@@ -48,7 +48,6 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
     }
     const handlesubmit = (e) => {
         e.preventDefault()
-        console.log("submit data ", inpval);
     }
     const handleOpenMenu = () => {
         setIsmenuopen(!isMenuopen)
@@ -77,8 +76,8 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
     }, []);
     return (
         // <div  className="">
-        <div className={`${isRemoved ? 'hidden' : 'block max-w-5xl mx-auto  bg-white p-6 shadow-md rounded-b-md '}`}>
-            <div className="space-y-4 p-6 rounded border-2 border-b-0 border-gray-200">
+        <div className={`${isRemoved ? 'hidden' : 'block max-w-5xl mx-auto  bg-white md:p-6 p-2 shadow-md rounded-b-md '}`}>
+            <div className="space-y-4 md:p-6 p-2 rounded border-2 border-b-0 border-gray-200">
                 {/* Image Section */}
                     { showFiles &&
                     <div className='justify-between mb-4 flex items-center space-x-2'>
@@ -202,12 +201,12 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
 
                 {/* Thumbnail Section */}
                 {isButtonToggle.isthumbnil && (
-                    <div className="space-y-4 flex">
+                    <div className="space-y-4 md:flex">
                         {/* Thumbnail Preview */}
-                        <div className="mt-4 w-1/4 h-[100px] mx-2 relative rounded border-2 border-gray-200 bg-gray-50 md:w-52 grid place-items-center">
+                        <div className="mt-4 w-3/4 h-[105px] px-2 relative rounded border-2 border-gray-200 bg-gray-50 md:w-52 grid place-items-center">
                             <FaFileImage className="h-20 w-30 text-2xl" />
                             {inpval.thumb_url && (
-                                <div className="absolute top-0 left-0">
+                                <div className="absolute top-0 left-0 w-full">
                                     <img src={inpval.thumb_url} alt="User Image" className="h-[100px] w-full md:w-52" />
                                 </div>
                             )}
@@ -220,7 +219,7 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
                                 type="url"
                                 name="thumb_url"
                                 placeholder="https://www.example.com"
-                                className="w-full border-2 border-gray-300 p-2 focus:border-gray-400 rounded-sm"
+                                className="md:w-full border-2 border-gray-300 p-2 focus:border-gray-400 rounded-sm"
                                 value={inpval.thumb_url}
                                 onChange={handlechange}
                             />
@@ -249,12 +248,12 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
 
                 {/* Sponsor Section */}
                 {isButtonToggle.issponser && (
-                    <div className="space-y-4 flex">
+                    <div className="space-y-4 md:flex">
                         {/* Sponsor Preview */}
-                        <div className="mt-4 w-1/4 h-[100px] mx-2 relative rounded border-2 border-gray-200 bg-gray-50 md:w-52 grid place-items-center">
+                        <div className="mt-4 w-3/4 h-[105px] px-2 relative rounded border-2 border-gray-200 bg-gray-50 md:w-52 grid place-items-center">
                             <FaFileImage className="h-20 w-30 text-2xl" />
                             {inpval.sponsor && (
-                                <div className="absolute top-0 left-0">
+                                <div className="absolute top-0 left-0 w-full">
                                     <img src={inpval.sponsor} alt="User Image" className="h-[100px] w-full md:w-52" />
                                 </div>
                             )}
@@ -267,7 +266,7 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
                                 type="url"
                                 name="sponsor"
                                 placeholder="https://www.example.com"
-                                className="w-full border-2 border-gray-300 p-2 focus:border-gray-400 rounded-sm"
+                                className="md:w-full border-2 border-gray-300 p-2 focus:border-gray-400 rounded-sm"
                                 value={inpval.sponsor}
                                 onChange={handlechange}
                             />
@@ -300,7 +299,7 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
                     <LuRefreshCw className="h-[23px] w-[23px]" />
                     <p className='ml-2 leading-none'> Change block type</p>
                 </button>
-                <div className={` ${isMenuopen ? '' : ''} relative`}>
+                <div className={` ${isMenuopen ? '' : ''} relative flex items-center`}>
                     <button
                         onClick={handleOpenMenu}
                         ref={buttonRef}
@@ -311,10 +310,10 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
                     </button>
                     {isMenuopen &&
                         <div className="absolute ">
-                            <div className="z-1 ">
+                            <div className="z-1 "> 
                                 {isMenuopen && (
                                     <div ref={dropdownRef}
-                                        className='w-52  left-30  absolute rounded bg-white border shadow-md text-xl border-gray-200 space-y-1'>
+                                        className='w-52  -right-20 top-12 md:top-4 absolute rounded bg-white border shadow-md text-xl border-gray-200 space-y-1'>
                                         <ul className="p-1">
                                             <li className="">
                                                 <button
@@ -380,12 +379,12 @@ const ImageComponent = ({setShowFiles , showFiles}) => {
                                         </ul>
                                     </div>
                                 )}
-                                <button className="p-3 bg-blue-300" onClick={((e) => handlesubmit(e))}  > submit</button>
                             </div>
                         </div>
                     }
                 </div>
             </div>
+            <button className="p-3 bg-blue-300" onClick={((e) => handlesubmit(e))} > submit</button>
         </div>
     );
 };

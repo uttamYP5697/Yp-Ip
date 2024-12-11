@@ -31,12 +31,10 @@ const RichTextEditor = () => {
     }, []);
 
     const handleSubmit = () => {
-        console.log("Submitted HTML Content:", editorContent);
-        console.log("Submitted Plain Text:", quillInstance.current.getText());
     };
 
     return (
-        <div className="bg-white border border-gray-300 rounded-lg shadow p-4">
+        <div className="bg-white border border-gray-300 rounded-b-lg shadow p-4">
 
             <div ref={editorRef} className="min-h-[200px]"></div>
 

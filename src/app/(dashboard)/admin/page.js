@@ -30,7 +30,7 @@ function AdminPage() {
 
   return (
     <div className="flex flex-col items-center  h-screen overflow-auto">
-      <div className=' p-7'>
+      <div className='md:p-7'>
         <div className="pt-14">
           <h1 className="text-3xl font-semibold text-gray-800  text-left mb-2">
             {new Date().getHours() < 12 ? "Good Morning!" : new Date().getHours() < 18 ? "Good Afternoon!" : "Good Evening!"}

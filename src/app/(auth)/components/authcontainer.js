@@ -10,7 +10,6 @@ export default function AuthContainer() {
     const { login } = useAuth();
 
     const handleLogin = async (data) => {
-        console.log("Login data:", data);
         try {
             await login(data);
             if (!localStorage.getItem("authToken")) {
@@ -24,12 +23,10 @@ export default function AuthContainer() {
     };
 
     const handleSignup = (data) => {
-        console.log("Signup data:", data);
         // Perform signup logic here
     };
 
     const handleResetPassword = (data) => {
-        console.log("Reset Password data:", data);
         // Perform password reset logic here
     };
 
@@ -37,7 +34,7 @@ export default function AuthContainer() {
 
         <div className="grid grid-rows-1 bg-slate-400">
             
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2 md:px-0 px-10">
                 <div className="flex flex-col sm:pl-6 pb-20 sm:pb-0 pt-10 sm:pr-6 lg:pr-20 lg:pt-28">
 
                     <div className=" w-full max-w-sm self-center  text-center flex flex-col">
@@ -60,7 +57,7 @@ export default function AuthContainer() {
                         )}
                     </div>
                     {/* Additional Options */}
-                    <div className="mt-4 text-center">
+                    <div className="my-4 text-center">
                         {activePage !== "login" && (
                             <p>
                                 Already have an account?{" "}
@@ -93,8 +90,8 @@ export default function AuthContainer() {
                     </div>
                 </div>
 
-                <div className="">
-                    <div className="h-screen flex right_side flex-col pb-20 pl-4 pr-4 sm:pb-0 pt-10 sm:pt-20 sm:pl-6 lg:pl-20 sm:pr-6 lg:pr-0 lg:pt-40  sm:block">
+                <div className="md:block hidden">
+                    <div className="h-full flex right_side flex-col pb-20 pl-4 pr-4 sm:pb-0 pt-10 sm:pt-20 sm:pl-6 lg:pl-20 sm:pr-6 lg:pr-0 lg:pt-40  sm:block">
                         <div className="max-w-sm self-center sm:self-start flex flex-col">
                         </div>
                     </div>

@@ -5,7 +5,6 @@ import AuthContainer from '../components/authcontainer';
 
 export default function LoginPage() {
   const { login } = useAuth();
-  console.log("🚀 ~ LoginPage ~ login:", login)
   const router = useRouter();
 
   const handleLogin = () => {

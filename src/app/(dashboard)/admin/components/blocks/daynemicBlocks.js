@@ -1,11 +1,11 @@
 import ImageComponent from "./imageBlock";
+import TextBlock from "./textBlock";
 import VideoBlock from "./videoBlocj";
 
 
 const DynamicBlock = ({ type, content }) => {
-    console.log("🚀 ~ DynamicBlock ~ type:", type)
     switch (type) {
-      case "text":
+      case "Text":
         return <TextBlock content={content} />;
       case "Image":
         return <ImageComponent content = {content} />;

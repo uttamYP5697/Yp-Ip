@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }) {
 
   useEffect(() => {
     if (!isLogin) {
-      router.push('/login');  // Redirect to login page if not logged in
+      router.push('/');  // Redirect to login page if not logged in
     }
   }, [isLogin, router]);
 
@@ -27,8 +27,8 @@ export default function DashboardLayout({ children }) {
     <AuthProvider>
       <div className="dashboard-layout">
         <SidebarProvider>
-          <div className=" flex bg-[#dfdff5] min-h-screen duration-200">
-            <div className="bg-[#F9F9F9]">
+          <div className="flex bg-[#dfdff5] min-h-screen duration-200">
+            <div className="bg-[#F9F9F9] ">
               <Sidebar />
             </div>
             <MainContent>{children}</MainContent>

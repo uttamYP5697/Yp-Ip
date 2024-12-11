@@ -1,11 +1,7 @@
 "use client";
-import HeroMediaSelector from '@/components/HeroMediaSelector';
-import TitleSection from '@/components/TitleSection';
 import { MdAddCircleOutline } from "react-icons/md";
 import { useState } from 'react';
-import RichTextEditor from '@/components/reachtextbox';
-import BlockInserter from '../(dashboard)/admin/common/BlockInserter';
-import ContentTypeSelector from '../(dashboard)/admin/common/ContentTypeSelector';
+import ContentTypeSelector from '../(dashboard)/admin/common/contentTypeSelector';
 
 
 export default function Home() {

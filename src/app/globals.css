@@ -4,7 +4,7 @@
 
 html, body
 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: "Power Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   overflow-y: scroll;
@@ -61,3 +61,20 @@ html, body
   background-image: url(https://app.cortextech.io/_nuxt/img/login-background.bf3aa48.png);
   background-size: 100% 100%;
 }
+
+.dropdown-content {
+  position: absolute;
+  max-height: 200px; /* Adjust based on design */
+  overflow-y: auto;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  white-space: nowrap;
+}
+
+
+
+

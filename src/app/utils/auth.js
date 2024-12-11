@@ -19,9 +19,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (data) => {
-    console.log("🚀 ~ login ~ data:", data)
     if(data.email === "ypdevloper@gmail.com" && data.password === "123456"){
-      console.log("Login successful");
     
     setIsLogin(true);
     localStorage.setItem('authToken', 'true');
@@ -36,7 +34,7 @@ export const AuthProvider = ({ children }) => {
     setIsLogin(false);
     localStorage.removeItem('authToken');
     localStorage.clear();
-    router.push('/login'); 
+    router.push('/'); 
   };
 
   if (!isMounted) {
