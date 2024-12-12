@@ -34,7 +34,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
         {/* Name Field */}
         <div className="mb-4">
           <div className="flex justify-between items-end">
-            <label htmlFor="name" className="text-body text-primary-400 block mb-1">
+            <label htmlFor="name" className="text-body text-white font-medium block mb-1">
               Name
             </label>
           </div>
@@ -60,7 +60,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
         {/* Email Field */}
         <div className="mb-4">
           <div className="flex justify-between items-end">
-            <label htmlFor="email" className="block text-gray-700 mb-2">
+            <label htmlFor="email" className="block font-medium text-white mb-2">
               Email
             </label>
           </div>
@@ -86,7 +86,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
         {/* Password Field */}
         <div className="mb-4 relative">
         <div className="flex justify-between items-end">
-          <label htmlFor="password" className="block text-gray-700 mb-2">
+          <label htmlFor="password" className="block font-medium text-white mb-2">
             Password
           </label>
           </div>
@@ -120,7 +120,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
         {/* Confirm Password Field */}
         <div className="mb-4 relative">
         <div className="flex justify-between items-end">
-          <label htmlFor="confirmPassword" className="block text-gray-700 mb-2">
+          <label htmlFor="confirmPassword" className="block font-medium text-white mb-2">
             Confirm Password
           </label>
           </div>
@@ -145,7 +145,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
             </button>
           </div>
           {errors.confirmPassword && (
-            <p className="text-red-500 text-sm">
+            <p className="text-red-500  text-sm">
               {errors.confirmPassword.message}
             </p>
           )}
@@ -154,7 +154,7 @@ export default function SignupForm({ onSwitchPage, onSignup }) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+          className="bg-transparent font-medium text-white px-4 py-2 rounded-full border-2 hover:border-transparent hover:bg-yellow duration-500"
         >
           Sign Up
         </button>

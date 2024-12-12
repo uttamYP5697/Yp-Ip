@@ -49,7 +49,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
           <div className="flex justify-between items-end">
             <label
               htmlFor="email"
-              className="text-body text-primary-400 block mb-1"
+              className="text-body font-medium		 text-white block mb-1"
             >
               Email
             </label>
@@ -79,7 +79,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
           <div className="flex justify-between items-end">
             <label
               htmlFor="password"
-              className="text-body text-primary-400 block mb-1"
+              className="text-body font-medium	 text-white block mb-1"
             >
               Password
             </label>
@@ -117,7 +117,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
         {/* Login Button */}
         <button
           type="submit"
-          className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+          className="bg-transparent font-medium text-white px-4 py-2 rounded-full border-2 hover:border-transparent hover:bg-yellow duration-500"
         >
           Log in
         </button>

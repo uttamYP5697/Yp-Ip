@@ -15,12 +15,12 @@ export default function ForgotPassword({ onSwitchPage, onResetPassword }) {
 
     return (
         <div className="forgot-password">
-            <h2 className="text-lg font-semibold mb-4">Forgot Password</h2>
+            <h2 className="text-lg text-white font-semibold mb-4">Forgot Password</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* Email Field */}
                 <div className="mb-4">
                 <div className="flex justify-between items-end">
-                    <label htmlFor="email" className="block text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-white font-medium mb-2">
                         Enter your registered email
                     </label>
                     </div>
@@ -46,7 +46,7 @@ export default function ForgotPassword({ onSwitchPage, onResetPassword }) {
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+                    className="bg-transparent font-medium text-white px-4 py-2 rounded-full border-2 hover:border-transparent hover:bg-yellow duration-500"
                 >
                     Reset Password
                 </button>

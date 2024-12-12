@@ -58,7 +58,7 @@ html, body
 }
 
 .right_side{
-  background-image: url(https://app.cortextech.io/_nuxt/img/login-background.bf3aa48.png);
+  background-image: url("../../public/backgroundimg.png");
   background-size: 100% 100%;
 }
 

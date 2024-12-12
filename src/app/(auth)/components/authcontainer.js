@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import LoginForm from "./loginform";
 import SignupForm from "./signupform";
@@ -6,97 +6,93 @@ import ForgotPassword from "./forgotpassword";
 import { useAuth } from "@/app/utils/auth";
 
 export default function AuthContainer() {
-    const [activePage, setActivePage] = useState("login");
-    const { login } = useAuth();
+  const [activePage, setActivePage] = useState("login");
+  const { login } = useAuth();
 
-    const handleLogin = async (data) => {
-        try {
-            await login(data);
-            if (!localStorage.getItem("authToken")) {
-                throw new Error("wrong credentials");
-            }
-        } catch (error) {
-            setTimeout(() => {
-                alert(error.message);
-            }, 2000);
-        }
-    };
+  const handleLogin = async (data) => {
+    try {
+      await login(data);
+      if (!localStorage.getItem("authToken")) {
+        throw new Error("wrong credentials");
+      }
+    } catch (error) {
+      setTimeout(() => {
+        alert(error.message);
+      }, 2000);
+    }
+  };
 
-    const handleSignup = (data) => {
-        // Perform signup logic here
-    };
+  const handleSignup = (data) => {
+    // Perform signup logic here
+  };
 
-    const handleResetPassword = (data) => {
-        // Perform password reset logic here
-    };
+  const handleResetPassword = (data) => {
+    // Perform password reset logic here
+  };
 
-    return (
-
-        <div className="grid grid-rows-1 bg-slate-400">
-            
-            <div className="grid md:grid-cols-2 md:px-0 px-10">
-                <div className="flex flex-col sm:pl-6 pb-20 sm:pb-0 pt-10 sm:pr-6 lg:pr-20 lg:pt-28">
-
-                    <div className=" w-full max-w-sm self-center  text-center flex flex-col">
-                 
-                        {activePage === "login" && (
-                            <LoginForm
-                                onLogin={handleLogin}
-                                onSwitchPage={setActivePage}
-                                onForgotPassword={() => setActivePage("forgot")}
-                            />
-                        )}
-                        {activePage === "signup" && (
-                            <SignupForm onSignup={handleSignup} onSwitchPage={setActivePage} />
-                        )}
-                        {activePage === "forgot" && (
-                            <ForgotPassword
-                                onResetPassword={handleResetPassword}
-                                onSwitchPage={setActivePage}
-                            />
-                        )}
-                    </div>
-                    {/* Additional Options */}
-                    <div className="my-4 text-center">
-                        {activePage !== "login" && (
-                            <p>
-                                Already have an account?{" "}
-                                <button
-                                    onClick={() => setActivePage("login")}
-                                    className="text-blue-500 underline"
-                                >
-                                    Login
-                                </button>
-                            </p>
-                        )}
-                        {activePage !== "signup" && (
-                            <p>
-                                Don't have an account?{" "}
-                                <button
-                                    onClick={() => setActivePage("signup")}
-                                    className="text-blue-500 underline"
-                                >
-                                    Sign up
-                                </button>
-                            </p>
-                        )}
-                        <button
-                            type="button"
-                            onClick={() => setActivePage("forgot")}
-                            className="inline e-link-secondary"
-                        >
-                            Forgotten your password?
-                        </button>
-                    </div>
-                </div>
-
-                <div className="md:block hidden">
-                    <div className="h-full flex right_side flex-col pb-20 pl-4 pr-4 sm:pb-0 pt-10 sm:pt-20 sm:pl-6 lg:pl-20 sm:pr-6 lg:pr-0 lg:pt-40  sm:block">
-                        <div className="max-w-sm self-center sm:self-start flex flex-col">
-                        </div>
-                    </div>
-                </div>
+  return (
+    <>
+      <div className="grid grid-rows-1 h-screen">
+        <div className="grid md:grid-cols-1 bg-black  right_side  md:px-0  px-10">
+          <div className="flex flex-col items-center h-screen">
+            <div className=" w-full max-w-sm self-center  text-center flex flex-col">
+              {activePage === "login" && (
+                <LoginForm
+                  onLogin={handleLogin}
+                  onSwitchPage={setActivePage}
+                  onForgotPassword={() => setActivePage("forgot")}
+                />
+              )}
+              {activePage === "signup" && (
+                <SignupForm
+                  onSignup={handleSignup}
+                  onSwitchPage={setActivePage}
+                />
+              )}
+              {activePage === "forgot" && (
+                <ForgotPassword
+                  onResetPassword={handleResetPassword}
+                  onSwitchPage={setActivePage}
+                />
+              )}
             </div>
+            {/* Additional Options */}
+            <div className="my-4 text-center">
+              {activePage !== "login" && (
+                <p className="text-white font-medium">
+                  Already have an account?{" "}
+                  <button
+                    onClick={() => setActivePage("login")}
+                    className="text-white  font-medium underline"
+                  >
+                    Login
+                  </button>
+                </p>
+              )}
+              {activePage !== "signup" && (
+                <p className="text-white font-medium">
+                  Don't have an account?{" "}
+                  <button
+                    onClick={() => setActivePage("signup")}
+                    className="text-white underline font-medium "
+                  >
+                    Sign up
+                  </button>
+                </p>
+              )}
+              <button
+                type="button"
+                onClick={() => setActivePage("forgot")}
+                className="inline e-link-secondary text-white font-medium"
+              >
+                Forgotten your password?
+              </button>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </>
+  );
 }
+
+
