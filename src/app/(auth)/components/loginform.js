@@ -21,7 +21,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <p className="text-center text-sm text-gray-600 mb-2">
           Login Credentials:
-        </p>
+        </p>  
         <div className="flex items-center justify-center">
           <span className="text-sm text-gray-600">Email:</span>
           <span className="text-sm text-gray-800 font-bold ml-2">ypdevloper@gmail.com</span>
@@ -31,16 +31,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
           <span className="text-sm text-gray-800 font-bold ml-2">123456</span>
         </div>
       </div>
-      <div
-        style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-        className="flex"
-      >
-        <img
-          src="https://www.yellowpanther.io/images/header-logo.svg"
-          alt="Logo"
-          className="self-center my-8 w-40"
-        />
-      </div>
+      
 
       {/* Login Form */}
       <form onSubmit={handleSubmit(onSubmit)} className="mb-8 flex flex-col">
@@ -119,7 +110,7 @@ export default function LoginForm({ onLogin, onSwitchPage }) {
           type="submit"
           className="bg-transparent font-medium text-white px-4 py-2 rounded-full border-2 hover:border-transparent hover:bg-yellow duration-500"
         >
-          Log in
+          Log in 
         </button>
       </form>
     </div>

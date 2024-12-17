@@ -49,17 +49,15 @@ export default function Home() {
         <div className="flex justify-center ml-3  w-1 border-l border-black h-5 my-2"></div>
       </div>
       {isOpen && (
-        <div className="max-w-5xl mx-auto my-10 bg-white shadow rounded-lg overflow-hidden">
+        <div className="max-w-5xl mx-auto  bg-white shadow rounded-lg overflow-hidden">
           <BlockInserter addBlock={addBlock} />
         </div>
       )}
       <div>
       </div>
-
       <div className="mt-8 max-w-3xl mx-auto my-10 bg-white shadow rounded-lg overflow-hidden">
         <ContentTypeSelector blocks={blocks} setBlocks={setBlocks} />
       </div>
-      
       <div>
       </div>
     </div>

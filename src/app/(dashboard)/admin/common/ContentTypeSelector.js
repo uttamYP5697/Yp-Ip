@@ -95,16 +95,12 @@ const ContentTypeSelector = ({ blocks, setBlocks, addBlock, toggleBlockList, ope
               </div>
             </div>
 
-            {/* Divider between blocks */}
-            {/* {index < blocks.length - 1 && (
-      <div className="flex justify-center ml-3 w-1 border-l border-black h-5 my-2"></div>
-    )} */}
 
             {/* Block Inserter */}
             {openIndex === index && (
               <>
                 <div className="flex justify-center ml-3 w-1 border-l border-black h-5 my-2"></div>
-                <div className="max-w-5xl mx-auto my-10 bg-white shadow rounded-lg overflow-hidden">
+                <div className="max-w-5xl mx-auto  bg-white shadow rounded-lg overflow-hidden">
                   <BlockInserter addBlock={addBlock} />
                 </div>
               </>

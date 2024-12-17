@@ -74,7 +74,22 @@ html, body
   padding: 8px;
   white-space: nowrap;
 }
-
-
-
+.react-loading-skeleton {
+  --base-color: #ebebeb;
+  --highlight-color: #0000ff26 !important;
+  --animation-duration: 1.5s;
+  --animation-direction: normal;
+  --pseudo-element-display: block;
+  background-color: var(--base-color);
+  width: 100%;
+  border-radius: 0.25rem;
+  display: inline-flex
+;
+  line-height: 1;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
 

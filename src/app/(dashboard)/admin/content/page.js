@@ -9,8 +9,8 @@ const Page = () => {
   const [title, setTitle] = useState('');
   const [summary, setSummary] = useState('');
   const [blocks, setBlocks] = useState([]);
-  const [openIndex, setOpenIndex] = useState(null); // Track open block
-  const [inatialBlock, setInatialBlock] = useState(false); // Track open block
+  const [openIndex, setOpenIndex] = useState(null); 
+  const [inatialBlock, setInatialBlock] = useState(false); 
 
   const toggleBlockList = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -46,7 +46,7 @@ const Page = () => {
             setSummary={setSummary}
           />
 
-          <div className="mt-8 max-w-5xl mx-auto">
+          <div className=" max-w-5xl mx-auto">
             {/* Add Block Button */}
             <div className="flex justify-center ml-3 w-1 border-l border-black h-5 my-2"></div>
             <div className="flex items-center justify-start">
@@ -65,7 +65,7 @@ const Page = () => {
               <>
                 <div className="flex justify-center ml-3 w-1 border-l border-black h-5 my-2"></div>
 
-                <div className="max-w-5xl mx-auto my-10 bg-white shadow rounded-lg overflow-hidden">
+                <div className="max-w-5xl mx-auto  bg-white shadow rounded-lg overflow-hidden">
                   <BlockInserter addBlock={addBlock} />
                 </div>
               </>

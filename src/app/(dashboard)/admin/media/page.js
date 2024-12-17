@@ -512,7 +512,7 @@ function page() {
                           <MdOutlinePushPin className="text-xl hover:bg-gray-300 rounded h-12 w-12 p-3" />
                         </div>
                         <div className="">
-                          <div className="dropdown inline-block ">
+                          <div className="dropdown relative inline-block ">
                             <button
                               ref={(el) => buttonRefs.current[i] = el} // Store button ref in the array
                               onClick={() => handleToggle(i)}

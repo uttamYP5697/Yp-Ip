@@ -9,6 +9,7 @@ import { FaArrowRightLong, FaFileImage } from 'react-icons/fa6'
 import { MdOutlineSurroundSound } from 'react-icons/md'
 import { TbShirt, TbShirtOff, TbShirtSport } from 'react-icons/tb'
 import "../../../app/globals.css"
+import MainPageLoader from '@/app/loader/mainPageLoader';
 
 
 
@@ -29,6 +30,8 @@ function AdminPage() {
   }
 
   return (
+    <>
+      {/* <MainPageLoader /> */}
     <div className="flex flex-col items-center  h-screen overflow-auto">
       <div className='md:p-7'>
         <div className="pt-14">
@@ -117,6 +120,7 @@ function AdminPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
